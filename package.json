@@ -1,0 +1,41 @@
+{
+  "name": "minidv-converter",
+  "version": "1.0.0",
+  "description": "Aplicación para convertir cintas Mini DV (AVI) a MP4",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "minidv",
+    "converter",
+    "ffmpeg",
+    "video"
+  ],
+  "author": "Mario",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "build": {
+    "appId": "com.mario.minidv-converter",
+    "productName": "Mini DV Converter",
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
